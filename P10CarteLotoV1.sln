@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34714.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P10CarteLotoV1", "P10CarteLotoV1.csproj", "{22240219-5095-43AD-B8DA-ADACF75A04FA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{2536385E-C671-4A5F-A836-A4BBA01B8EE1}"
+	ProjectSection(SolutionItems) = preProject
+		project\CarteDeLoto Cahier des charges.txt = project\CarteDeLoto Cahier des charges.txt
+		project\CarteDeLotopdf.pdf = project\CarteDeLotopdf.pdf
+		project\Essai Positionnement.xlsx = project\Essai Positionnement.xlsx
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{22240219-5095-43AD-B8DA-ADACF75A04FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22240219-5095-43AD-B8DA-ADACF75A04FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22240219-5095-43AD-B8DA-ADACF75A04FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22240219-5095-43AD-B8DA-ADACF75A04FA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2AC1EE8C-5B3F-4A40-B3F7-C2189CCD6BD8}
+	EndGlobalSection
+EndGlobal

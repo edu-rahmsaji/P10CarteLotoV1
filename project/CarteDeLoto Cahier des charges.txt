@@ -1,0 +1,139 @@
+Créer une carte de loto dans les règles de l'art
+. La carte contient 15 numéros choisis parmis les nombres de 1 à 90
+. La carte est composée de 3 lignes et 9 colonnes
+. Chaque ligne doit contenir 5 numéros
+. Chaque colonne contient des numéros dans une plage spécifique
+  . colonne 1 : de  1 à 9 (!)
+  . colonne 2 : de 10 à 19 
+  . colonne 3 : de 20 à 29 
+  . colonne 4 : de 30 à 39   
+  . colonne 5 : de 40 à 49 
+  . colonne 6 : de 50 à 59 
+  . colonne 7 : de 60 à 69 
+  . colonne 8 : de 70 à 79 
+  . colonne 9 : de 80 à 90 (!)
+. Chaque colonne peut contenir 1, 2 ou 3 numéros / dans notre cas nous décidons 1 ou 2 numéros
+. Les numéros d'une colonne sont présentés de haut en bas par ordre croissant
+. La case du haut d'une colonne n'est pas obligatoirement utilisée
+. Chaque carte comporte un numéro de série
+
+Ergonomie :
+	. Les cartes qui contiennent 3 numéros sur une colonne ne sont pas ergonomiques
+	. La disposition des numéros sur la colonne doit être harmonieuse 
+	  pour l'ensemble de la carte
+	. Le nombre de numéros dans une colonne doit être harmonieux
+      pour l'ensemble de la carte
+	. Les cartes les plus harmonieuses sont celles:
+		. qui ont 6 colonnes à 2 numéros et 3 à 1 numéro
+		. dont la disposition des numéros sur la colonne évite l'effet bloc
+			13 24
+			19 26
+
+Dans une carte, une case est repérée par
+. la présence ou non d'un numéro
+. le numéro lui-même
+. la colonne où est positionné le numéro
+. la ligne où est positionné le numéro
+. le fait que le numéro a été coché ou non dans la phase de jeu
+
+Une carte
+. est composée d'un ensemble de numéros
+. avec leur positionnement respectifs 
+. Il s'agit donc d'un ensemble de cases
+. une carte comporte un numéro de série
+
+. on prévoit un affichage simple de son contenu (simple texte brut)
+
+NoSerie
+ ---- ---- ---- ---- ---- ---- ---- ---- ----
+|    |    |    |    |    |    |    |    |    |
+| XX | XX | XX | XX | XX | XX | XX | XX | XX |
+|    |    |    |    |    |    |    |    |    |
+ ---- ---- ---- ---- ---- ---- ---- ---- ----
+|    |    |    |    |    |    |    |    |    |
+| XX | XX | XX | XX | XX | XX | XX | XX | XX |
+|    |    |    |    |    |    |    |    |    |
+ ---- ---- ---- ---- ---- ---- ---- ---- ----
+|    |    |    |    |    |    |    |    |    |
+| XX | XX | XX | XX | XX | XX | XX | XX | XX |
+|    |    |    |    |    |    |    |    |    |
+ ---- ---- ---- ---- ---- ---- ---- ---- ----
+
+et un autre très light : NoSerie : "04-34-45 ... 87-90"
+
+But du projet
+. Mettre en place les classes nécessaires pour permettre la création d'une carte de loto
+	. Une classe Case
+	. Une classe Carte
+	. Une classe LotCartes / pour gérer un ensemble de cartes
+	. Une Fenêtre MainWindow pour les tests
+	
+. Assurer les fonctionnalités suivantes
+	. 1) Générer aléatoirement et afficher une carte de loto en respectant les règles et l'ergonomie du jeu
+	. 2) Générer un ensemble de n (entre 10 et 100) cartes qui doivent pas être 
+	  identiques en ce qui concerne leurs numéros	
+	. 3) Contrôler si un ensemble de n cartes contient bien des cartes différentes
+	. 4) Charger des cartes (NoSerie, numéros et positionnement) depuis un fichier .csv 
+	  dans un lot de cartes avec contrôle du respect des règles, de l'ergonomie
+	  pour chaque carte et de l'unicité des numéros de chaque carte 
+	  et de leur numéro de série
+	. 5) Enregister les cartes (NoSerie, numéros et positionnement) d'un lot dans un fichier .csv
+	. 6) Permettre l'affichage d'une carte de loto parmi un ensemble de n cartes
+	  dans la fenêtre principale, selon le principe d'affichage ci-desssus
+        . 7) Optionnel : Créer une série de n cartes qui, sur l'ensemble, ne comporte pas plus de x numéros à double
+        . 8) Optionnel : Idem que ci-dessus, mais en plus, l'utilisateur peut choisir des numéros fétiches 
+
+
+En ce qui concerne l’usage de chatgpt … il ne pas faut envoyer « l’énoncé » en son entier dans la demande … 
+L’AI va pondre le code sans problème, seulement la capacité d’analyse est perdue … 
+Nous les profs, nous ne sommes pas intéressés à noter la compétence d’une AI …
+
+Manière de faire :
+Discussion entre vous possible et encouragée
+ . Si on aide quelqu’un, on ne lui prend jamais son clavier ou sa souris …
+ . Interdiction formelle de se transférer du code produit 
+ . AI : utilisation intelligente : être capables … en présentation … d’expliquer clairement chaque ligne de code produit,
+        sans y mettre les éventuels commentaires de l’AI, sinon la note max : 3.5
+ . Une première phase (minimum 45’), sans coder
+   - on se concentre sur le point 1) du cahier des charges
+   - produire un premier jet du diagramme de classes (classes avec leur champs, propriétés (get ? set ?), 
+     constructeurs, méthodes avec leur proto dans draw.io par exemple) ...
+   - Mise en discussion avec la classe … cela évite led projets hors sujet
+
+Ramassage de la version produite en fin de demi-journée (y compris le diagramme de classes initial)
+ . fichier .zip VISA_ProjetCarteLoto_Partiel_1.zip 
+
+Les points du cahier des charges 
+ . Sont tous obligatoires et évalués 
+   - Fonctionnalité à l’utilisation de l’application
+   - Pertinence du code lié (AOO, bonnes pratiques, …)
+ . Doivent être démontrés lors de la présentation en fin de projet
+   - Démontrés lors d’une démonstration de leur application
+   - Code correspondant expliqué à la demande du prof
+
+Le paradigme orienté objets est celui utilisé :
+ . Diagramme de classes cohérent et respectant l’AOO
+ . Pas de programmation procédurale
+ . Pas de codage « massif » dans les méthodes événement de l’interface graphique
+ . Pas d’interaction avec les objets graphiques de l’interface utilisateur dans les méthodes de classe
+ . Le programmeur satisfait les besoins du client …et pas le contraire
+ . Le programmeur code pour celui qui le relit et non pas pour soi-même et pour gagner du temps
+ . Avec la phrase typique « oui monsieur, mais ça fonctionne » 
+   on peut se rendre de Sion à Sierre, sur l’autoroute, en marche arrière et à 15 km/h 😉 
+ . ...
+
+Astuce pour le projet
+ . Maintenir, pour une carte de loto, un champ de classe du genre ‘’01 04 14 19 23 … 81 90’’ 
+   - Tous les 15 numéros de la carte selon un proto de sauvegarde précis 
+   - Numéros triés par ordre croissant
+   - Cela permet de contrôler facilement les doublons de cartes
+
+
+	  
+	 
+	
+
+	
+
+
+  
